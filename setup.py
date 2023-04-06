@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='scrying',
-    version='0.0.1',
+    version='0.1.1',
     description='A ScryfallAPI port written in Python',
     url='https://github.com/chumpblocckami/scrying',
     author='Matteo Mazzola',
