@@ -23,12 +23,13 @@ class Scrying():
     def download_from_url(self, query):
         has_more = True
         page = 1
+        url = self.url + query
         while has_more:
-            response = requests.get(self.url + query)
+            response = requests.get(url)
             has_more = response.json()["has_more"]
             url = response.json()["next_page"] if "next_page" in response.json() else ""
             remaining_pages = int(response.json()["total_cards"] / 175)
-            for card in tqdm(response.json()["data"], desc=f"Downloading page {page}/{remaining_pages}"):
+            for card in tqdm(response.json()["data"], desc=f"Downloading page {page}/{remaining_pages+1}"):
                 if "image_uris" in card:
                     self.add(card["image_uris"]["art_crop"])
                 else:
