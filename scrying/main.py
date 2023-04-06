@@ -1,9 +1,7 @@
 from io import BytesIO
 
 import PIL.Image
-import pandas as pd
 import requests
-from datasets import Dataset, Features, Image, Value, Array3D
 from tqdm import tqdm
 
 
@@ -12,7 +10,6 @@ class Scrying():
         self.url = "https://api.scryfall.com/cards/search?q="
         self.cards = []
         self.verbose = verbose
-        self.it = -1
 
     def add(self, url):
         self.cards.append(url)

@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='scrying',
-    version='0.1.0',
+    version='0.0.1',
     description='A ScryfallAPI port written in Python',
     url='https://github.com/chumpblocckami/scrying',
     author='Matteo Mazzola',
@@ -10,7 +10,8 @@ setup(
     license='BSD 2-clause',
     packages=["scrying"],
     install_requires=['requests',
-                      'pillow'
+                      'pillow',
+                      'tqdm'
                       ],
 
     classifiers=[
